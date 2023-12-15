@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.thymeleaf.org">
+    <head>
+        <html>View</html>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <form th:action="@{/insertValue}" th:object="${person}" method="post">
+            <label>Name</label>
+            <input type="text" th:field="*{name}" />
+            <br>
+            <label>Age</label>
+            <input type="text" th:field="*{age}" />
+            <br>
+            <input tyoe="submit" value="送信" id="button" />
+        </form>
+    </body>
+</html>
