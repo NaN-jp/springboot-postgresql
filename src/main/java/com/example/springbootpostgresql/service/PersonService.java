@@ -1,6 +1,6 @@
 package com.example.springbootpostgresql.service;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,10 @@ public class PersonService {
         return repository.save(person);
     }
 
+    public List<Person> findPerson(){
+        return repository.findAll();
+    }
     public int findAgePerson(Integer id){
-        Optional<Person> optional = repository.findById(id);
+        return repository.getReferenceById(id).getAge();
     }
 }
