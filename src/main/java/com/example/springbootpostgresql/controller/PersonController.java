@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.springbootpostgresql.model.Person;
+import com.example.springbootpostgresql.service.PersonService;
 
 @Controller
 public class PersonController {
